@@ -10,11 +10,13 @@
                     <td>
                         <table cellpadding="0">
                             <tr>
-                                <td align="center" colspan="2"><b>Iniciar sesión</b></td>
+                                <td align="center" colspan="2"><h1>Iniciar sesión</h1></td>
+
                             </tr>
+
                             <tr>
                                 <td align="right">
-                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName"><b>Nombre de usuario:</b></asp:Label>
+                                    <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName"><b>Nombre de usuario: --</b></asp:Label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
@@ -23,20 +25,24 @@
                             </tr>
                             <tr>
                                 <td align="right">
-                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password"><b>Contraseña:<b></asp:Label>
+                                    <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password"><b>Contraseña: --<b></asp:Label>
                                 </td>
                                 <td>
                                     <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="La contraseña es obligatoria." ToolTip="La contraseña es obligatoria." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
+                            
                             <tr>
-                                <td colspan="2">
+
+                                <%--<td colspan="2">
                                     <asp:CheckBox ID="RememberMe" runat="server" Text="Recordármelo la próxima vez." />
-                                </td>
+                                </td>--%>
                             </tr>
+
                             <tr>
                                 <td align="center" colspan="2" style="color:Red;">
+                                    <br />
                                     <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
                                 </td>
                             </tr>

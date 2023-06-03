@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link href="Content/Modal.css" rel="stylesheet" />
-  <font  size="20" style="color: #ffffff" >Agenda</font>
+  <font  size="20" >Agenda</font>
     <br />
     <br />
    
