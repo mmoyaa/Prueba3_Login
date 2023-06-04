@@ -11,28 +11,27 @@
 
         <div class="row">
             <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Primer Texto</h2>
+                <h2 id="gettingStartedTitle">Quienes Somos</h2>
                 <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                   Somos un centro de atención integral infantil, abordamos temáticas como :Autismo, TDAH, síndrome de Down, estimulación temprana y trastornos del neurodesarrollo.
                 </p>
                 <p>
                    <%-- <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>--%>
                 </p>
             </section>
             <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Segundo texto</h2>
+                <h2 id="librariesTitle">Nuestra Misión</h2>
                 <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
+                    Nuestra misión es contribuir en el desarrollo y cuidado de la salud de nuestros niños/as y adolescentes así como sus familias, permitiéndoles desarrollar estrategias que impacten positivamente en su calidad de vida.
                 </p>
                 <p>
                     <%--<a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>--%>
                 </p>
             </section>
             <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Tercer texto</h2>
+                <h2 id="hostingTitle">Profecionales:</h2>
                 <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                       Nuestros profesionales son especializados en las diversidad temáticas y abordajes de intervención .Contamos con terapeuta ocupacional, fonoaudiólogos, psicólogas y psicopedagogas.
                 </p>
                 <p>
                  <%--   <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>--%>
