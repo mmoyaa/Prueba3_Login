@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3fc391857dbf46d4a1b8d3893baeae6e" Name="Diagram1">
+      <Diagram DiagramId="6e796de6a55b4683a470775f4888ab06" Name="Diagram1">
         <EntityTypeShape EntityType="BDPrueba4Model.TBBiblioteca" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPrueba4Model.TBCitas" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPrueba4Model.TBDoctor" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="BDPrueba4Model.TBPaciente" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDPrueba4Model.TBPaciente" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="BDPrueba4Model.TBUsuario" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="BDPrueba4Model.FK__TBCitas__idDocto__3B75D760" ManuallyRouted="false" />
-        <AssociationConnector Association="BDPrueba4Model.FK__TBCitas__idPacie__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPrueba4Model.FK__TBCitas__idDocto__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="BDPrueba4Model.FK__TBCitas__idPacie__4D94879B" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

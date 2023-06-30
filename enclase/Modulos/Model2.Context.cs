@@ -13,10 +13,10 @@ namespace enclase.Modulos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BDPrueba4Entities : DbContext
+    public partial class BDPrueba4Entities3 : DbContext
     {
-        public BDPrueba4Entities()
-            : base("name=BDPrueba4Entities")
+        public BDPrueba4Entities3()
+            : base("name=BDPrueba4Entities3")
         {
         }
     

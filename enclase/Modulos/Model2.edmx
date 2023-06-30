@@ -44,13 +44,12 @@
           <Key>
             <PropertyRef Name="idPaciente" />
           </Key>
-          <Property Name="idPaciente" Type="int" Nullable="false" />
+          <Property Name="idPaciente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="50" />
           <Property Name="apellido" Type="varchar" MaxLength="50" />
           <Property Name="fono" Type="varchar" MaxLength="15" />
           <Property Name="correo" Type="varchar" MaxLength="100" />
           <Property Name="edad" Type="int" />
-          <Property Name="Nacimiento" Type="date" />
           <Property Name="dirección" Type="varchar" MaxLength="100" />
           <Property Name="previsión" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -65,7 +64,7 @@
           <Property Name="fono" Type="varchar" MaxLength="15" />
           <Property Name="perfil" Type="varchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__TBCitas__idDocto__3B75D760">
+        <Association Name="FK__TBCitas__idDocto__4CA06362">
           <End Role="TBDoctor" Type="Self.TBDoctor" Multiplicity="0..1" />
           <End Role="TBCitas" Type="Self.TBCitas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -77,7 +76,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TBCitas__idPacie__3C69FB99">
+        <Association Name="FK__TBCitas__idPacie__4D94879B">
           <End Role="TBPaciente" Type="Self.TBPaciente" Multiplicity="0..1" />
           <End Role="TBCitas" Type="Self.TBCitas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -95,11 +94,11 @@
           <EntitySet Name="TBDoctor" EntityType="Self.TBDoctor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBPaciente" EntityType="Self.TBPaciente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBUsuario" EntityType="Self.TBUsuario" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__TBCitas__idDocto__3B75D760" Association="Self.FK__TBCitas__idDocto__3B75D760">
+          <AssociationSet Name="FK__TBCitas__idDocto__4CA06362" Association="Self.FK__TBCitas__idDocto__4CA06362">
             <End Role="TBDoctor" EntitySet="TBDoctor" />
             <End Role="TBCitas" EntitySet="TBCitas" />
           </AssociationSet>
-          <AssociationSet Name="FK__TBCitas__idPacie__3C69FB99" Association="Self.FK__TBCitas__idPacie__3C69FB99">
+          <AssociationSet Name="FK__TBCitas__idPacie__4D94879B" Association="Self.FK__TBCitas__idPacie__4D94879B">
             <End Role="TBPaciente" EntitySet="TBPaciente" />
             <End Role="TBCitas" EntitySet="TBCitas" />
           </AssociationSet>
@@ -130,8 +129,8 @@
           <Property Name="modoCita" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="idDoctor" Type="Int32" />
           <Property Name="idPaciente" Type="Int32" />
-          <NavigationProperty Name="TBDoctor" Relationship="Self.FK__TBCitas__idDocto__3B75D760" FromRole="TBCitas" ToRole="TBDoctor" />
-          <NavigationProperty Name="TBPaciente" Relationship="Self.FK__TBCitas__idPacie__3C69FB99" FromRole="TBCitas" ToRole="TBPaciente" />
+          <NavigationProperty Name="TBDoctor" Relationship="Self.FK__TBCitas__idDocto__4CA06362" FromRole="TBCitas" ToRole="TBDoctor" />
+          <NavigationProperty Name="TBPaciente" Relationship="Self.FK__TBCitas__idPacie__4D94879B" FromRole="TBCitas" ToRole="TBPaciente" />
         </EntityType>
         <EntityType Name="TBDoctor">
           <Key>
@@ -145,22 +144,21 @@
           <Property Name="especialidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="convenio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="tipo_Cita" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="TBCitas" Relationship="Self.FK__TBCitas__idDocto__3B75D760" FromRole="TBDoctor" ToRole="TBCitas" />
+          <NavigationProperty Name="TBCitas" Relationship="Self.FK__TBCitas__idDocto__4CA06362" FromRole="TBDoctor" ToRole="TBCitas" />
         </EntityType>
         <EntityType Name="TBPaciente">
           <Key>
             <PropertyRef Name="idPaciente" />
           </Key>
-          <Property Name="idPaciente" Type="Int32" Nullable="false" />
+          <Property Name="idPaciente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="fono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="edad" Type="Int32" />
-          <Property Name="Nacimiento" Type="DateTime" Precision="0" />
           <Property Name="dirección" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="previsión" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="TBCitas" Relationship="Self.FK__TBCitas__idPacie__3C69FB99" FromRole="TBPaciente" ToRole="TBCitas" />
+          <NavigationProperty Name="TBCitas" Relationship="Self.FK__TBCitas__idPacie__4D94879B" FromRole="TBPaciente" ToRole="TBCitas" />
         </EntityType>
         <EntityType Name="TBUsuario">
           <Key>
@@ -173,7 +171,7 @@
           <Property Name="fono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="perfil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <Association Name="FK__TBCitas__idDocto__3B75D760">
+        <Association Name="FK__TBCitas__idDocto__4CA06362">
           <End Role="TBDoctor" Type="Self.TBDoctor" Multiplicity="0..1" />
           <End Role="TBCitas" Type="Self.TBCitas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -185,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__TBCitas__idPacie__3C69FB99">
+        <Association Name="FK__TBCitas__idPacie__4D94879B">
           <End Role="TBPaciente" Type="Self.TBPaciente" Multiplicity="0..1" />
           <End Role="TBCitas" Type="Self.TBCitas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -197,17 +195,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BDPrueba4Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BDPrueba4Entities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TBBiblioteca" EntityType="Self.TBBiblioteca" />
           <EntitySet Name="TBCitas" EntityType="Self.TBCitas" />
           <EntitySet Name="TBDoctor" EntityType="Self.TBDoctor" />
           <EntitySet Name="TBPaciente" EntityType="Self.TBPaciente" />
           <EntitySet Name="TBUsuario" EntityType="Self.TBUsuario" />
-          <AssociationSet Name="FK__TBCitas__idDocto__3B75D760" Association="Self.FK__TBCitas__idDocto__3B75D760">
+          <AssociationSet Name="FK__TBCitas__idDocto__4CA06362" Association="Self.FK__TBCitas__idDocto__4CA06362">
             <End Role="TBDoctor" EntitySet="TBDoctor" />
             <End Role="TBCitas" EntitySet="TBCitas" />
           </AssociationSet>
-          <AssociationSet Name="FK__TBCitas__idPacie__3C69FB99" Association="Self.FK__TBCitas__idPacie__3C69FB99">
+          <AssociationSet Name="FK__TBCitas__idPacie__4D94879B" Association="Self.FK__TBCitas__idPacie__4D94879B">
             <End Role="TBPaciente" EntitySet="TBPaciente" />
             <End Role="TBCitas" EntitySet="TBCitas" />
           </AssociationSet>
@@ -217,7 +215,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BDPrueba4ModelStoreContainer" CdmEntityContainer="BDPrueba4Entities">
+        <EntityContainerMapping StorageEntityContainer="BDPrueba4ModelStoreContainer" CdmEntityContainer="BDPrueba4Entities3">
           <EntitySetMapping Name="TBBiblioteca">
             <EntityTypeMapping TypeName="BDPrueba4Model.TBBiblioteca">
               <MappingFragment StoreEntitySet="TBBiblioteca">
@@ -265,7 +263,6 @@
                 <ScalarProperty Name="fono" ColumnName="fono" />
                 <ScalarProperty Name="correo" ColumnName="correo" />
                 <ScalarProperty Name="edad" ColumnName="edad" />
-                <ScalarProperty Name="Nacimiento" ColumnName="Nacimiento" />
                 <ScalarProperty Name="dirección" ColumnName="dirección" />
                 <ScalarProperty Name="previsión" ColumnName="previsión" />
               </MappingFragment>

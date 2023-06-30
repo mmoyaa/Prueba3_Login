@@ -16,27 +16,47 @@ namespace enclase
 
             //BDPrueba4Entities
             //creamos la instancia de  conexion
-            var contexto = new BDPrueba4Entities();
-            //leer todos los pacientes
-            var pacientes = contexto.TBPaciente.ToList();
+            var contexto = new BDPrueba4Entities3();
+            ////leer todos los pacientes
+            //var pacientes = contexto.TBPaciente.ToList();
 
-            //creamos un nuevo paciente
-            var nuevoPaciente = new TBPaciente()
+            //foreach (var paciente in pacientes)
+            //{
+            //    Console.WriteLine(paciente.nombre);
+            //}
+
+            var pacientes = contexto.TBPaciente.ToList();
+            foreach(TBPaciente paciente in pacientes)
             {
-                nombre = "juan",
-                apellido = "perez",
-                fono = "285778",
-                correo = "juan@gmail.com",
-                edad = 34,
-                //Nacimiento = 1 / 1 / 1 esteeee es el que valeeeeeeeeeeeeeeeeeeeeeee,
-                dirección = "la calle",
-                previsión= "fonasa"
-            };
-            contexto.TBPaciente.Add(nuevoPaciente);
-            contexto.SaveChanges();
+                // Crear una nueva fila en la tabla HTML y agregar las celdas
+                Console.WriteLine(paciente.nombre);
+                // ...
+
+
+            }
+
+          
+
+
+
+
+            //creamos un nuevo paciente (esto esta bien)
+            //var nuevoPaciente = new TBPaciente()
+            //{
+            //    nombre = "juaneefffeepppppppp",
+            //    apellido = "perezee",
+            //    fono = "285778eee",
+            //    correo = "juan@gmail.comeeee",
+            //    edad = 35,
+              
+            //    dirección = "la calle",
+            //    previsión= "fonasa"
+            //};
+            //contexto.TBPaciente.Add(nuevoPaciente);
+            //contexto.SaveChanges();
 
             //actualizar un paciente
-            var pacienteupdate = contexto.TBPaciente.FirstOrDefault(p=>p.idPaciente ==  32);
+            var pacienteupdate = contexto.TBPaciente.FirstOrDefault(p=>p.idPaciente ==  33);
             if (pacienteupdate != null) 
             {
                 pacienteupdate.nombre = "nuevo nombre";
@@ -44,7 +64,7 @@ namespace enclase
             }
             //eliminar paciente
 
-            var pacienteliminar = contexto.TBPaciente.FirstOrDefault(p => p.idPaciente == 32);
+            var pacienteliminar = contexto.TBPaciente.FirstOrDefault(p => p.idPaciente == 33);
             if (pacienteliminar != null)
             {
                 contexto.TBPaciente.Remove(pacienteliminar);
@@ -52,6 +72,8 @@ namespace enclase
             }
 
         }
+
+      
     }
 }
 

@@ -26,7 +26,6 @@ namespace enclase.Modulos
         public string fono { get; set; }
         public string correo { get; set; }
         public Nullable<int> edad { get; set; }
-        public Nullable<System.DateTime> Nacimiento { get; set; }
         public string dirección { get; set; }
         public string previsión { get; set; }
     

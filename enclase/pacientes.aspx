@@ -151,6 +151,23 @@
     </div>
 
 
+<table id="TBPaciente" border="1">
+    <thead>
+        <tr>
+            <th>idPaciente</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>fono</th>
+            <th>correo</th>
+            <th>edad</th> 
+            <th>dirección</th>
+            <th>previsión</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí se mostrarán los datos de la tabla TBPaciente -->
+    </tbody>
+</table>
 
 
 </asp:Content>
